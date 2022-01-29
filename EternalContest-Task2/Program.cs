@@ -9,13 +9,17 @@ namespace EternalContest_Task2
     static void Main(string[] args)
     {
       int N = int.Parse(Console.ReadLine());
-      if (N % 2 == 0)
+      if (N % 2 == 0 && N % 3 != 0 || N == 6)
       {
         Console.WriteLine(N / 2);
       }
-      else if(N != 1)
+      else if(N != 1 && N % 3 != 0 || N == 3)
       {
         Console.WriteLine(N / 2 + 1);
+      }
+      else if(N % 3 == 0)
+      {
+        Console.WriteLine(N / 3 + 1);
       }
       else
       {
